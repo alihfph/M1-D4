@@ -13,18 +13,18 @@ Write a function "area" which receives 2 parameters (l1,l2) and calculates the a
 Write a function "crazySum" which receives two integers. It should return the sum of those two values, but if the two values are the same then it should return their sum multiplied by 3.
 */
 
-// const crazySum = function (value1, value2) {
+const crazySum = function (value1, value2) {
 
-//     // if(value1 === value2){
-//     //     return console.log(value1+value2)
-//     // }
-//     // else {
-//     //     return console.log((value1+value2)/3)
-//     // }
+    if(value1 === value2){
+        return console.log(value1+value2)
+    }
+    else {
+        return console.log((value1+value2)/3)
+    }
     
     
-// }
-// console.log(crazySum(5,6))
+}
+console.log(crazySum(5,6))
 
 /* EXERCISE 3
 Write a function "crazyDiff" that computes the absolute difference between a given number and 19. 

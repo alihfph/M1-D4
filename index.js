@@ -26,7 +26,7 @@ It should return triple their absolute difference if the given number is greater
 */
 
 const crazyDiff = function(givennumber, number19) {
-    givennumber < 19 ? console.log(givennumber-number19) : console.log((givennumber-number19)*3)
+    givennumber < 19 ? console.log(givennumber-number19) : console.log(Math.abs(givennumber-number19)*3)
     
     
 }
@@ -54,12 +54,13 @@ It should add the word "Strive" in front of the given string, but if the given s
 
 const strivify = function (_checkstrive) {
     // _checkstrive.includes("Strive") ? console.log(strivify) : console.log("Strive", + strivify) 
-if (_checkstrive.includes("Strive")) {
+    
+    if (_checkstrive.includes("Strive")) {
 
-    return console.log(strivify)
+    return console.log(_checkstrive)
 }
 else {
-    return console.log("Strive"+ strivify)
+    return console.log("Strive"+ _checkstrive)
 
 }
 
@@ -72,10 +73,10 @@ HINT: Module Operator
 */
 const check3and7 = function (numberpositive) {
     if (numberpositive % (3 || 7)) {
-        console.log(true)
+        console.log("yes it is")
     }
     else{
-        console.log(false)
+        console.log("nop it is not")
     }
 } 
 
@@ -95,16 +96,21 @@ reverse("Hello");
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 // */
-function upperFirst(str) {
-    const capitalise = str[0].toUpperCase();
-    return console.log(capitalise + str.slice(1))
-}
-upperFirst("i am not good");
+const capitalize = function (words)  {
+    let replacement = words.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
+    return console.log(replacement)
+  }
+  capitalize("hi, i am here");
+
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
 
-/* WRITE YOUR CODE HERE */
+const cutString = function (firstandlast)  {
+    let cuttingnow = firstandlast.slice(1,-1);;
+    return console.log(cuttingnow)
+  }
+  cutString("hi, i am here");
 
 /* EXERCISE 10
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.

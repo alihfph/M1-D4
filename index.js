@@ -55,17 +55,17 @@ It should add the word "Strive" in front of the given string, but if the given s
 const strivify = function (_checkstrive) {
     // _checkstrive.includes("Strive") ? console.log(strivify) : console.log("Strive", + strivify) 
     
-    if (_checkstrive.includes("Strive")) {
+    if (_checkstrive.match("Strive")) {
 
     return console.log(_checkstrive)
 }
 else {
-    return console.log("Strive"+ _checkstrive)
+    return console.log("Strive "+ _checkstrive)
 
 }
 
 }
-strivify("I am Strive");
+strivify("I am Hero");
 
 /* EXERCISE 6
 Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
@@ -85,11 +85,8 @@ check3and7(78);
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
 */
 function reverse(reverseString){
-    let reversed = "";    
-    for (var i = reverseString.length - 1; i >= 0; i--){        
-      reversed += reverseString[i];
-    }    
-    return console.log(reversed)
+    let stringrevers = reverseString.split("").reverse().join(""); 
+    return console.log(stringrevers)
   }
 reverse("Hello");
 
@@ -107,7 +104,7 @@ Write a function "cutString" to create a new string without the first and last c
 */
 
 const cutString = function (firstandlast)  {
-    let cuttingnow = firstandlast.slice(1,-1);;
+    let cuttingnow = firstandlast.slice(1,-1);
     return console.log(cuttingnow)
   }
   cutString("hi, i am here");
@@ -117,7 +114,7 @@ Write a function "giveMeRandom" which accepts a number n and returns an array co
 */
 
 function giveMeRandom(max) {
-    let givennumber = Math.floor(Math.random() * Math.floor(max))
+    let givennumber = Math.floor(Math.random() * 10) + 1  
     return console.log(givennumber)
   }
   giveMeRandom (12);
